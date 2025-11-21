@@ -67,7 +67,7 @@ select{
 input{
     border-radius: 5px;
     padding: 5px;
-    width: 190px;
+    width: 280px;
 }
 
 input#botao{
@@ -153,6 +153,12 @@ footer{
         height: 100%;
         padding-bottom: 60px; /* Espaço para o footer */
     }
+
+    input, select{
+        width: 350px;
+        padding: 3px;
+    }
+
     footer {
         position: static;
         width: 100%;
