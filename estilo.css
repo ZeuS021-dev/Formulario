@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+*{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+}
+
+body{
+    opacity: 0; animation: fadeIn 1.5s ease-in-out forwards;
+    line-height: 1.2;
+    font-size: 1.3em;
+    background-image: url('pexels-justin-hamilton-16109-92248.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main{
+    background-color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+h1{
+    border-radius: 4px;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #00026d;
+    box-shadow: 5px 6px 5px #0000003d;
+    color: white;
+    padding: 15px;
+    
+}
+
+h2{
+    font-size: 1.2em;
+}
+
+select{
+    width: 205px;
+    height: 26px;
+}
+
+input{
+    border-radius: 5px;
+    padding: 5px;
+    width: 190px;
+}
+
+input#botao{
+    border-color: black;
+    width: 135px;
+    background-color: rgb(53, 184, 53);
+    border-radius: 15px;
+}
+
+input#botao:hover{
+    transform: scale(1.05);
+}
+
+input#botao.spin {
+    animation: spin 0.5s ease;
+}
+
+input, select:hover{
+    transition: border-color 0.3s ease;
+    border-color: #0b7199;
+}
+
+input:focus, select:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+    animation: borderGlow 2s infinite alternate;
+}
+
+@keyframes borderGlow {
+    0% { border-color: #28a745; box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); }
+    25% { border-color: #e4d50e; box-shadow: 0 0 5px rgba(228, 214, 14, 0.534); }
+    50% { border-color: #d42222; box-shadow: 0 0 5px rgba(212, 34, 34, 0.514); }
+    100% { border-color: #007bff; box-shadow: 0 0 10px rgba(0, 123, 255, 0.7); }
+}
+
+footer:hover{
+    opacity: 1;
+    transition: 1s;
+}
+
+footer{
+    background: rgba(0, 0, 0, 0.301);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.308);
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#res {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    word-wrap: break-word;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+#res.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#confirmar, #cancelar {
+    animation: bounceIn 0.6s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+        position: static;
+        height: 100%;
+        padding-bottom: 60px; /* Espaço para o footer */
+    }
+    footer {
+        position: static;
+        width: 100%;
+        height: auto;
+        background: rgb(255, 255, 255);
+        color: rgba(0, 0, 0, 0.158);
+        padding: 0px;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+

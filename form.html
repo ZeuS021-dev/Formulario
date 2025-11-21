@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <main>
+        <h1>Formulário de Inscrição</h1>
+        <h2>Digite os dados solicitados no formulário abaixo.</h2>
+        <section>
+        <h2>Informações do candidato</h2>
+        <p>Nome completo 👤: <input type="text" id="nome"></p>
+        <p>E-mail ✉️: <input type="email" name="email" id="email"></p>
+        <p>País 🏳️: <select name="seletor" id="pais">
+            <option id="padrao">Selecione um país...</option>
+            <option>Alemanha</option>
+            <option>Brasil</option>
+            <option>China</option>
+            <option>EUA</option>
+            <option>Japão</option>
+            <option>Outro</option>
+        </select></p>
+        <p>Número de celular 📱: <input type="text" id="num"></p>
+        <p>Data de nascimento 👶🏻: <input type="date" name="data" id="data"></p>
+        <input type="button" value="Validar Dados" id="botao" onclick="validar()">
+        </section>
+        <div id="res">
+            
+        </div>
+    </main>
+    <footer>
+            <p>Todos os direitos reservados. &copy;ZeuS</p> 
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
